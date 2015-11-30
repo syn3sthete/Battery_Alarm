@@ -27,7 +27,7 @@
             </intent-filter>-->
         </service>
 
-        <receiver android:name=".Receiever.ServiceHandler" />
+        <!--<receiver android:name=".Receiever.ServiceHandler" />-->
 
     </application>
 

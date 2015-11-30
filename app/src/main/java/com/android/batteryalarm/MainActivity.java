@@ -1,7 +1,5 @@
 package com.android.batteryalarm;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -11,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.android.batteryalarm.Receiever.ServiceHandler;
 import com.android.batteryalarm.Service.BatteryStatus;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
         registerReceiver(mBatInfoReceiver, new IntentFilter(
                 Intent.ACTION_BATTERY_CHANGED));
 
-        AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        /*AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(getBaseContext(), ServiceHandler.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(getBaseContext(), 0, intent, PendingIntent.FLAG_ONE_SHOT);
         am.cancel(pendingIntent);
-        am.set(AlarmManager.RTC, System.currentTimeMillis(), pendingIntent);
+        am.set(AlarmManager.RTC, System.currentTimeMillis(), pendingIntent);*/
 
     }
 

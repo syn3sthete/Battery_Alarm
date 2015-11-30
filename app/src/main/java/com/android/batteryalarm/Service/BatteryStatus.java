@@ -83,6 +83,7 @@ public class BatteryStatus extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        startService(new Intent(getBaseContext(), BatteryStatus.class));
 //        Toast.makeText(this, "Service destroyed...", Toast.LENGTH_LONG).show();
     }
 
