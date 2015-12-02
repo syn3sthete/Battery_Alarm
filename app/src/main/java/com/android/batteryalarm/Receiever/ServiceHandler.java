@@ -6,7 +6,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.android.batteryalarm.Service.BatteryStatus;
+import com.android.batteryalarm.BatteryStatus;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;

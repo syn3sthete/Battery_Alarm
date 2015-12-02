@@ -1,4 +1,4 @@
-package com.android.batteryalarm.Service;
+package com.android.batteryalarm;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;

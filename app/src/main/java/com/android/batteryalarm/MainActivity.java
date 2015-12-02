@@ -9,9 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.android.batteryalarm.Service.BatteryStatus;
+import com.android.batteryalarm.Custom.WaterWaveProgress;
 
 public class MainActivity extends AppCompatActivity {
+
+    private WaterWaveProgress waveProgress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
 
         registerReceiver(mBatInfoReceiver, new IntentFilter(
                 Intent.ACTION_BATTERY_CHANGED));
+
+        waveProgress = (WaterWaveProgress) findViewById(R.id.waterWaveProgress1);
+        waveProgress.setShowProgress(false);
+        waveProgress.animateWave();
 
         /*AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(getBaseContext(), ServiceHandler.class);
@@ -40,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
             pb.setProgress(level);
             TextView tv = (TextView) findViewById(R.id.txtBatteryLevel);
             tv.setText("Battery Level: " + Integer.toString(level) + "%");
+            waveProgress.setProgress(level);
         }
     };
 

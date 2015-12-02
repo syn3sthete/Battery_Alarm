@@ -19,7 +19,7 @@
         </activity>
 
         <service
-            android:name=".Service.BatteryStatus"
+            android:name=".BatteryStatus"
             android:enabled="true">
             <!--<intent-filter>
                 <action android:value="com.android.batteryalarm.Service.MY_SERVICE"
